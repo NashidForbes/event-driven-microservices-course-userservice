@@ -1,0 +1,5 @@
+rootProject.name = 'UsersService'
+include ':sagacoreapi'
+project(':sagacoreapi').projectDir = new File('../sagacoreapi')
+
+
