@@ -3,11 +3,13 @@ package com.appsdeveloperblog.estore.usersservice.handlers;
 import com.appsdeveloperblog.estore.sagacoreapi.models.PaymentDetails;
 import com.appsdeveloperblog.estore.sagacoreapi.models.User;
 import com.appsdeveloperblog.estore.sagacoreapi.query.FetchUserPaymentDetailsQuery;
+import org.axonframework.queryhandling.QueryHandler;
 import org.springframework.stereotype.Component;
 
 @Component
 public class UserEventsHandler {
 
+    @QueryHandler
     public User getUserPaymentDetails(FetchUserPaymentDetailsQuery userPaymentDetails){
         PaymentDetails paymentDetails = PaymentDetails.builder()
                 .cardNumber("123Card")
